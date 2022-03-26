@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "177158788931",
+    "project_id": "expense-manager-574",
+    "storage_bucket": "expense-manager-574.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177158788931:android:3cf1a922e0e80cc68801f6",
+        "android_client_info": {
+          "package_name": "com.mercury.expense_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177158788931-42s58g1n2tqennjpqsod2uep30d16h32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRKZzw3tp6F0ZIU3PQNoyIP3RlrCBrnks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177158788931-42s58g1n2tqennjpqsod2uep30d16h32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
