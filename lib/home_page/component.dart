@@ -1,42 +1,23 @@
+import 'package:expense_manager/home_page/row_card/component.dart';
+import 'package:expense_manager/home_page/row_card/models.dart';
 import 'package:flutter/material.dart';
 
+import '../pages/expenses/component.dart';
+
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+
+  HomePage({Key? key}) : super(key: key);
+
+  final List<HomeRowData> homeRows = [
+    HomeRowData(Icons.account_balance_wallet, 'Expenses', Colors.red.shade300, 'expense', const ExpensesPage()),
+    HomeRowData(Icons.calendar_month, 'Bills', Colors.lightBlue.shade300),
+    HomeRowData(Icons.attach_money, 'Income', Colors.green.shade300),
+    HomeRowData(Icons.account_balance, 'Balance', Colors.deepPurple.shade300)
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Row(
-          children: const [
-            Expanded(child: Text('Income', textAlign: TextAlign.center)),
-            Expanded(child: Text('Expense', textAlign: TextAlign.center)),
-            Expanded(child: Text('Balance', textAlign: TextAlign.center)),
-          ],
-        ),
-        getBox(height: 50, rowContent: const [
-          Expanded(child: Text('Current Balance')),
-          Expanded(child: Text('Expense', textAlign: TextAlign.right)),
-        ]),
-        ...getDatedBoxes()
-      ],
-    );
-  }
-
-  List<SizedBox> getDatedBoxes() => [
-    getBox(rowContent: [])
-  ];
-
-  SizedBox getBox({double height = 75, required List<Widget> rowContent}) {
-    return SizedBox(
-        height: height,
-        child: Card(
-            elevation: 4,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
-              child: Row(
-                children: rowContent,
-              ),
-            )));
+    List<Widget> rows = homeRows.map((e) => RowCard(e)).toList();
+    return ListView(children: rows);
   }
 }
