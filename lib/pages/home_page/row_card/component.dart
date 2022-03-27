@@ -1,4 +1,4 @@
-import 'package:expense_manager/home_page/row_card/models.dart';
+import '../../home_page/row_card/models.dart';
 import 'package:flutter/material.dart';
 
 class RowCard extends StatelessWidget {

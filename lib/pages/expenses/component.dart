@@ -1,5 +1,6 @@
 import 'package:expense_manager/pages/category_template/component.dart';
 import 'package:expense_manager/pages/category_template/models.dart';
+import 'package:expense_manager/pages/expenses/add_new/component.dart';
 import 'package:flutter/material.dart';
 
 class ExpensesPage extends StatelessWidget {
@@ -11,7 +12,14 @@ class ExpensesPage extends StatelessWidget {
         pageHeading: 'Expenses',
         actions: [
           CategoryTemplateAction(
-              onPressed: () {}, icon: const Icon(Icons.add_box_outlined))
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AddNewExpense(),
+                        fullscreenDialog: true));
+              },
+              icon: const Icon(Icons.add_box_outlined))
         ],
         body: Center(
             child: ElevatedButton(
