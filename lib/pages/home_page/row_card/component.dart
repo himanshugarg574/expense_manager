@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import '../../home_page/row_card/models.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +53,7 @@ class RowCard extends StatelessWidget {
       onTap: () {
         if(rowData.routePage != null) {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => rowData.routePage!));
+              CupertinoPageRoute(builder: (context) => rowData.routePage!));
         }
       },
     );

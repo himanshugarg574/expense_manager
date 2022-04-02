@@ -1,6 +1,7 @@
 import 'package:expense_manager/pages/category_template/component.dart';
 import 'package:expense_manager/pages/category_template/models.dart';
 import 'package:expense_manager/pages/expenses/add_new/component.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ExpensesPage extends StatelessWidget {
@@ -15,7 +16,7 @@ class ExpensesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                     context,
-                    MaterialPageRoute(
+                    CupertinoPageRoute(
                         builder: (context) => const AddNewExpense(),
                         fullscreenDialog: true));
               },
